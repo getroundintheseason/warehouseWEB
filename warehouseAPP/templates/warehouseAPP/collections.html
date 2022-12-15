@@ -1,0 +1,13 @@
+{% extends 'warehouseAPP/main.html' %}
+{% block content %}
+    <h1>title: {{collection}}</h1>
+    <p>category: {{collection.category}}</p>
+    <p>artist: {{collection.artist}}</p>
+    <h2>detail: {{collection.desciption}}</h2>
+    <p>bookcase: {{collection.bookcase}}</p>
+    <p>isBorrow: {{collection.isBorrow}}</p>
+    <p>borrowWho: {{collection.borrowWho}}</p>
+    <br>
+    <br>
+    <a class="btn btn-primary" href="{% url 'collections' %}" role="button">BACK</a>
+{% endblock content %}

@@ -1,0 +1,53 @@
+{% extends 'warehouseAPP/main.html' %}
+{% block content %}
+    <h1>
+        {{request.user}}'s Collection Warehouse &#128537; !!
+    </h1>
+    <a href="{% url 'collection-create' %}">create collection</a>
+
+    <form method="GET">
+        <input type="text" name="search-area" value="{{ search_input }}">
+        <select type="text" name="search-type" value="{{ search_type_input }}">
+            <option value="title">Choose which field you want to search</option>
+            <option value="title">title</option>
+            <option value="desciption">desciption</option>
+            <option value="bookcase">bookcase</option>
+            <option value="isBorrow">isBorrow (0 or 1)</option>
+            <option value="borrowWho">borrowWho</option>
+            <option value="artist">artist</option>
+        </select>
+        <input type="submit" value="Search">
+    </form>
+
+    <table border="1" class="table table-striped table-sm">>
+        <thead>
+            <tr>
+                <th scope="col">item</th>
+                <th scope="col">category</th>
+                <th scope="col">bookcase</th>
+                <th scope="col">artist</th>
+                <th scope="col">isBorrow</th>
+                <th scope="col">Fuction</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for collection in collections %}
+            <tr>
+                <td>{{collection.title}}</td>
+                <td>{{collection.category}}</td>
+                <td>{{collection.bookcase}}</td>
+                <td>{{collection.artist}}</td>
+                <td>{{collection.isBorrow}}</td>
+                <td colspan="2">
+                    <a href="{% url 'collection' collection.id %}">View</a>
+                    <a href="{% url 'collection-update' collection.id%}">Edit</a>
+                    <a href="{% url 'collection-delete' collection.id%}">Delete</a>
+                </td>
+            </tr>
+            {% empty %}
+                <h3>no item in list</h3>
+            {% endfor %}
+        </tbody>
+            
+    </table>
+{% endblock content %}

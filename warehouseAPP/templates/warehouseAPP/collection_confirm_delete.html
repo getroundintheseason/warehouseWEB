@@ -1,0 +1,13 @@
+{% extends 'warehouseAPP/main.html' %}
+{% block content %}
+    <h1>Delete!!</h1>
+    <a href="{% url 'collections' %}">go back</a>
+    <form method="POST" action="">
+        {% csrf_token %}
+        <p>Are you sure you want to delete this collection {{collection}}</p>
+        <input type="submit" value="Delete">
+    </form>
+    <br>
+    <br>
+    <a class="btn btn-primary" href="{% url 'collections' %}" role="button">BACK</a>
+{% endblock content %}

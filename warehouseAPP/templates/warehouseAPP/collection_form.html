@@ -1,0 +1,13 @@
+{% extends 'warehouseAPP/main.html' %}
+{% block content %}
+    <h1>Collection Form!!!!</h1>
+
+    <form method="POST" action="">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="Submit">
+    </form>
+    <br>
+    <br>
+    <a class="btn btn-primary" href="{% url 'collections' %}" role="button">BACK</a>
+{% endblock content %}
