@@ -1,5 +1,8 @@
 # Django-Warehouse-App
 
+# 目的
+紀錄蒐藏品的 *分類* *位置* *有沒有出借* 等資訊
+
 # Getting Started
 *python ==3.7 or up and django == 3 or up*
 ## Installing
@@ -21,9 +24,6 @@ open terminal and type
 
 # Register User
 可以提供使用者註冊及登入帳號
-
-# 目的
-紀錄蒐藏品的 *分類* *位置* *有沒有出界* 等資訊
 
 # Collection 蒐藏 功能
 -  CollectionDetail 瀏覽 蒐藏
