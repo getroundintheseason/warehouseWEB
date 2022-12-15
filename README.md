@@ -12,20 +12,20 @@ open terminal and type
     cd warehouse
     pip3 install -r requirements.txt
 
-## Migrate the database
+### Migrate the database
     python3 manage.py makemigrations
     python3 manage.py migrate
     
-## Create admin account
+### Create admin account
     python3 manage.py createsuperuser
 
-## Run the website!!
+### Run the website!!
     python3 manage.py runserver
 
-# Register User
+## Register User
 可以提供使用者註冊及登入帳號
 
-# Collection 蒐藏 功能
+## Collection 蒐藏 功能
 -  CollectionDetail 瀏覽 蒐藏
 -  CollectionCreate 新增 蒐藏
 -  CollectionUpdate 更新 蒐藏
